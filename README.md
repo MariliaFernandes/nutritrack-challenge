@@ -6,14 +6,6 @@ The application presents a daily nutrition overview, including calorie progress,
 
 ## 📱 Preview
 
-<p align="center">
-  <img 
-    width="350" 
-    alt="NutriTrack Application Preview" 
-    src="https://github.com/user-attachments/assets/e353f6c1-fd91-41ba-a7f8-879215168570" 
-  />
-</p>
-
 ---
 
 ## 🚀 Technologies
