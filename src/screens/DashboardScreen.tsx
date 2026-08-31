@@ -22,8 +22,10 @@ export function DashboardScreen() {
           {/* =========================================
               TOPO + RESUMO NUTRICIONAL
           ========================================= */}
+
           <View style={styles.topSection}>
             {/* Logo */}
+
             <View style={styles.header}>
               <Text style={styles.logoText}>NutriTrack</Text>
 
@@ -36,6 +38,7 @@ export function DashboardScreen() {
             </View>
 
             {/* Calorias + Macros */}
+
             <NutritionSummary
               caloriesLeft={summary.caloriesLeft}
               dailyGoalPercentage={summary.dailyGoalPercentage}
@@ -44,8 +47,15 @@ export function DashboardScreen() {
           </View>
 
           {/* =========================================
+              MENU DE NAVEGAÇÃO
+          ========================================= */}
+
+          <BottomTabs />
+
+          {/* =========================================
               REFEIÇÕES
           ========================================= */}
+
           <View style={styles.mealsSection}>
             <Text style={styles.sectionTitle}>MEALS</Text>
 
@@ -59,17 +69,13 @@ export function DashboardScreen() {
           {/* =========================================
               BOTÃO LOG FOOD
           ========================================= */}
+
           <View style={styles.logFoodContainer}>
             <View style={styles.logFoodButton}>
               <Text style={styles.logFoodText}>LOG FOOD</Text>
             </View>
           </View>
         </ScrollView>
-
-        {/* =========================================
-            MENU INFERIOR
-        ========================================= */}
-        <BottomTabs />
       </View>
     </SafeAreaView>
   );
