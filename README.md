@@ -5,6 +5,7 @@ A React Native implementation of a nutrition dashboard developed as part of a te
 The application presents a daily nutrition overview, including calorie progress, macronutrient tracking, meal information, and navigation elements.
 
 ## 📱 Preview
+<img width="1168" height="892" alt="Captura de tela 2026-08-31 190341" src="https://github.com/user-attachments/assets/3b198a6c-3570-4768-92c9-a429b0055b34" />
 
 ---
 
