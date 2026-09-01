@@ -5,7 +5,16 @@ A React Native implementation of a nutrition dashboard developed as part of a te
 The application presents a daily nutrition overview, including calorie progress, macronutrient tracking, meal information, and navigation elements.
 
 ## 📱 Preview
-<img width="1168" height="892" alt="Captura de tela 2026-08-31 190341" src="https://github.com/user-attachments/assets/3b198a6c-3570-4768-92c9-a429b0055b34" />
+
+### Original reference
+
+<img width="1168" height="892" alt="NutriTrack dashboard reference" src="https://github.com/user-attachments/assets/3b198a6c-3570-4768-92c9-a429b0055b34" />
+
+### React Native CLI implementation
+
+<img width="384" height="860" alt="NutriTrack React Native CLI implementation" src="https://github.com/user-attachments/assets/e0518566-9836-4d77-a7d5-76dc09997a6c" />
+
+The dashboard was recreated using React Native CLI and TypeScript, with reusable components, TypeScript interfaces, mock data, progress indicators, and the requested UI layout.
 
 ---
 
@@ -13,41 +22,66 @@ The application presents a daily nutrition overview, including calorie progress,
 
 This project was built using:
 
-- ⚛️ React Native
-- 📱 Expo
-- 🔷 TypeScript
-- 🧭 Expo Router
+* ⚛️ React Native
+* 🔷 TypeScript
+* 📱 React Native CLI
+* 🧭 React Native Safe Area Context
+* ⭐ React Native Vector Icons
 
 ---
 
 ## ✨ Features
 
-- Daily nutrition summary
-- Calorie progress indicator
-- Macronutrient progress tracking
-- Protein progress bar
-- Carbohydrates progress bar
-- Fat progress bar
-- Meal list populated with mock data
-- Add Meal component
-- Log Food button
-- Bottom navigation interface
-- Responsive mobile layout
+* Daily nutrition summary
+* Calorie progress indicator
+* Macronutrient progress tracking
+* Protein progress bar
+* Carbohydrates progress bar
+* Fat progress bar
+* Meal list populated with mock data
+* Add Meal component
+* Log Food button
+* Bottom navigation interface
+* Responsive mobile layout
 
 ---
 
 ## 🏗️ Project Structure
 
-The application was structured using reusable components and TypeScript to keep the code organized and maintainable.
+The application is organized using reusable components and TypeScript interfaces to keep the code maintainable and easy to extend.
+
+```text
+NutriTrackCLI/
+├── android/
+├── ios/
+├── src/
+│   ├── components/
+│   │   ├── AddMealButton.tsx
+│   │   ├── BottomTabs.tsx
+│   │   ├── MacroProgress.tsx
+│   │   ├── MealCard.tsx
+│   │   └── NutritionSummary.tsx
+│   ├── data/
+│   │   └── mockData.ts
+│   ├── screens/
+│   │   └── DashboardScreen.tsx
+│   ├── theme/
+│   │   └── colors.ts
+│   └── types/
+│       └── nutrition.ts
+├── App.tsx
+├── package.json
+└── tsconfig.json
+```
 
 Key concepts used in the project include:
 
-- Component-based architecture
-- TypeScript interfaces
-- Mock data
-- Reusable UI components
-- React Native styling
-- File-based navigation with Expo Router
+* Component-based architecture
+* TypeScript interfaces
+* Mock data
+* Reusable UI components
+* React Native styling
+* Native Android and iOS project structure
 
 ---
 
@@ -57,11 +91,10 @@ Key concepts used in the project include:
 
 Make sure you have the following installed:
 
-- Node.js
-- npm
-- Expo Go (optional, for testing on a physical device)
-
----
+* Node.js
+* npm
+* Android Studio and Android SDK for Android development
+* React Native CLI development environment
 
 ### Installation
 
@@ -71,10 +104,10 @@ Clone the repository:
 git clone https://github.com/MariliaFernandes/nutritrack-challenge.git
 ```
 
-Navigate to the project folder:
+Navigate to the React Native CLI project:
 
 ```bash
-cd NutriTrackChallenge
+cd nutritrack-challenge/NutriTrackCLI
 ```
 
 Install dependencies:
@@ -83,32 +116,21 @@ Install dependencies:
 npm install
 ```
 
-Start the Expo development server:
+### Running on Android
+
+Make sure an Android emulator or physical Android device is available, then run:
 
 ```bash
-npx expo start
+npm run android
 ```
 
----
-
-## 🌐 Running on Web
-
-To run the project in the browser:
+The application can also be started with:
 
 ```bash
-npx expo start --web
+npm start
 ```
 
----
-
-## 📲 Running on Mobile
-
-After starting Expo:
-
-1. Install the Expo Go app on your mobile device.
-2. Make sure your computer and mobile device are connected to the same network.
-3. Scan the QR Code displayed in the terminal.
-4. The application will open on your device.
+and then launched on the connected Android device.
 
 ---
 
@@ -116,28 +138,43 @@ After starting Expo:
 
 This project was developed based on the requirements provided for the technical challenge:
 
-- React Native implementation
-- TypeScript usage
-- Nutrition dashboard interface
-- Mock data for meals and nutrition information
-- Progress indicators
-- Clean component architecture
-- Accurate implementation of the provided UI layout
+* React Native implementation
+* TypeScript usage
+* Nutrition dashboard interface
+* Mock data for meals and nutrition information
+* Progress indicators
+* Clean component architecture
+* Accurate implementation of the provided UI layout
+
+---
+
+## 🧪 Validation
+
+The project was validated using:
+
+```bash
+npx tsc --noEmit
+```
+
+The TypeScript compilation completed successfully.
+
+The Android application was also built and installed successfully on an Android emulator.
 
 ---
 
 ## 🧠 Development Approach
 
-The focus of this implementation was to create a clean and maintainable interface while following React Native best practices.
+The implementation focused on creating a clean, reusable, and maintainable React Native interface while accurately reproducing the provided dashboard design.
 
 The project emphasizes:
 
-- Clear component organization
-- Reusable UI elements
-- TypeScript type safety
-- Readable and maintainable code
-- Accurate visual implementation
-- Responsive mobile design
+* Clear component organization
+* Reusable UI elements
+* TypeScript type safety
+* Mock data separation
+* Readable and maintainable code
+* Accurate visual implementation
+* Native React Native CLI setup
 
 ---
 
