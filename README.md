@@ -1,8 +1,8 @@
-# 🥗 NutriTrack Challenge
+# 🥗 NutriTrack Challenge — React Native CLI
 
 A React Native implementation of a nutrition dashboard developed as part of a technical challenge.
 
-The application presents a daily nutrition overview, including calorie progress, macronutrient tracking, meal information, and navigation elements.
+The application presents a daily nutrition overview, including calorie progress, macronutrient tracking, meal information, and bottom navigation.
 
 ## 📱 Preview
 
@@ -20,12 +20,10 @@ The dashboard was recreated using React Native CLI and TypeScript, with reusable
 
 ## 🚀 Technologies
 
-This project was built using:
-
 * ⚛️ React Native
-* 🔷 TypeScript
 * 📱 React Native CLI
-* 🧭 React Native Safe Area Context
+* 🔷 TypeScript
+* 🛡️ React Native Safe Area Context
 * ⭐ React Native Vector Icons
 
 ---
@@ -74,14 +72,17 @@ NutriTrackCLI/
 └── tsconfig.json
 ```
 
-Key concepts used in the project include:
+### Architecture
 
-* Component-based architecture
-* TypeScript interfaces
+The implementation follows a component-based architecture with a clear separation between:
+
+* UI components
+* Screen-level components
 * Mock data
-* Reusable UI components
-* React Native styling
-* Native Android and iOS project structure
+* TypeScript interfaces
+* Theme and styling
+
+This structure makes the application easier to maintain and extend.
 
 ---
 
@@ -93,8 +94,11 @@ Make sure you have the following installed:
 
 * Node.js
 * npm
-* Android Studio and Android SDK for Android development
-* React Native CLI development environment
+* Android Studio
+* Android SDK
+* Android Emulator or a physical Android device
+
+For React Native CLI environment setup, follow the official React Native documentation.
 
 ### Installation
 
@@ -116,49 +120,51 @@ Install dependencies:
 npm install
 ```
 
-### Running on Android
+### Running the application
 
-Make sure an Android emulator or physical Android device is available, then run:
-
-```bash
-npm run android
-```
-
-The application can also be started with:
+Start Metro:
 
 ```bash
 npm start
 ```
 
-and then launched on the connected Android device.
+In another terminal, run the Android application:
 
----
+```bash
+npm run android
+```
 
-## 🎯 Challenge Requirements
-
-This project was developed based on the requirements provided for the technical challenge:
-
-* React Native implementation
-* TypeScript usage
-* Nutrition dashboard interface
-* Mock data for meals and nutrition information
-* Progress indicators
-* Clean component architecture
-* Accurate implementation of the provided UI layout
+The application can also be launched directly from Android Studio using the included native Android project.
 
 ---
 
 ## 🧪 Validation
 
-The project was validated using:
+The project was validated using TypeScript:
 
 ```bash
 npx tsc --noEmit
 ```
 
-The TypeScript compilation completed successfully.
+TypeScript compilation completed successfully.
 
 The Android application was also built and installed successfully on an Android emulator.
+
+---
+
+## 🎯 Challenge Requirements
+
+This implementation addresses the requested challenge requirements:
+
+* React Native implementation
+* React Native CLI
+* TypeScript
+* Nutrition dashboard interface
+* Mock data for meals and nutrition information
+* Progress indicators
+* Clean component architecture
+* TypeScript interfaces
+* Accurate implementation of the provided UI layout
 
 ---
 
@@ -171,10 +177,10 @@ The project emphasizes:
 * Clear component organization
 * Reusable UI elements
 * TypeScript type safety
-* Mock data separation
+* Separation of mock data from UI components
 * Readable and maintainable code
 * Accurate visual implementation
-* Native React Native CLI setup
+* Native React Native CLI project structure
 
 ---
 
