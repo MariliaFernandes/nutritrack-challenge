@@ -1,97 +1,195 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🥗 NutriTrack Challenge — React Native CLI
 
-# Getting Started
+A React Native implementation of a nutrition dashboard developed as part of a technical challenge.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+The application presents a daily nutrition overview, including calorie progress, macronutrient tracking, meal information, and bottom navigation.
 
-## Step 1: Start Metro
+## 📱 Preview
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Original reference
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+<img width="1168" height="892" alt="NutriTrack dashboard reference" src="https://github.com/user-attachments/assets/3b198a6c-3570-4768-92c9-a429b0055b34" />
 
-```sh
-# Using npm
+### React Native CLI implementation
+
+<img width="384" height="860" alt="NutriTrack React Native CLI implementation" src="https://github.com/user-attachments/assets/e0518566-9836-4d77-a7d5-76dc09997a6c" />
+
+The dashboard was recreated using React Native CLI and TypeScript, with reusable components, TypeScript interfaces, mock data, progress indicators, and the requested UI layout.
+
+---
+
+## 🚀 Technologies
+
+* ⚛️ React Native
+* 📱 React Native CLI
+* 🔷 TypeScript
+* 🛡️ React Native Safe Area Context
+* ⭐ React Native Vector Icons
+
+---
+
+## ✨ Features
+
+* Daily nutrition summary
+* Calorie progress indicator
+* Macronutrient progress tracking
+* Protein progress bar
+* Carbohydrates progress bar
+* Fat progress bar
+* Meal list populated with mock data
+* Add Meal component
+* Log Food button
+* Bottom navigation interface
+* Responsive mobile layout
+
+---
+
+## 🏗️ Project Structure
+
+The application is organized using reusable components and TypeScript interfaces to keep the code maintainable and easy to extend.
+
+```text
+NutriTrackCLI/
+├── android/
+├── ios/
+├── src/
+│   ├── components/
+│   │   ├── AddMealButton.tsx
+│   │   ├── BottomTabs.tsx
+│   │   ├── MacroProgress.tsx
+│   │   ├── MealCard.tsx
+│   │   └── NutritionSummary.tsx
+│   ├── data/
+│   │   └── mockData.ts
+│   ├── screens/
+│   │   └── DashboardScreen.tsx
+│   ├── theme/
+│   │   └── colors.ts
+│   └── types/
+│       └── nutrition.ts
+├── App.tsx
+├── package.json
+└── tsconfig.json
+```
+
+### Architecture
+
+The implementation follows a component-based architecture with a clear separation between:
+
+* UI components
+* Screen-level components
+* Mock data
+* TypeScript interfaces
+* Theme and styling
+
+This structure makes the application easier to maintain and extend.
+
+---
+
+## 💻 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js
+* npm
+* Android Studio
+* Android SDK
+* Android Emulator or a physical Android device
+
+For React Native CLI environment setup, follow the official React Native documentation.
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MariliaFernandes/nutritrack-challenge.git
+```
+
+Navigate to the React Native CLI project:
+
+```bash
+cd nutritrack-challenge/NutriTrackCLI
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Running the application
+
+Start Metro:
+
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+In another terminal, run the Android application:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+The application can also be launched directly from Android Studio using the included native Android project.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🧪 Validation
 
-```sh
-bundle install
+The project was validated using TypeScript:
+
+```bash
+npx tsc --noEmit
 ```
 
-Then, and every time you update your native dependencies, run:
+TypeScript compilation completed successfully.
 
-```sh
-bundle exec pod install
-```
+The Android application was also built and installed successfully on an Android emulator.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 🎯 Challenge Requirements
 
-# OR using Yarn
-yarn ios
-```
+This implementation addresses the requested challenge requirements:
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+* React Native implementation
+* React Native CLI
+* TypeScript
+* Nutrition dashboard interface
+* Mock data for meals and nutrition information
+* Progress indicators
+* Clean component architecture
+* TypeScript interfaces
+* Accurate implementation of the provided UI layout
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 🧠 Development Approach
 
-Now that you have successfully run the app, let's make changes!
+The implementation focused on creating a clean, reusable, and maintainable React Native interface while accurately reproducing the provided dashboard design.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+The project emphasizes:
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+* Clear component organization
+* Reusable UI elements
+* TypeScript type safety
+* Separation of mock data from UI components
+* Readable and maintainable code
+* Accurate visual implementation
+* Native React Native CLI project structure
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 👩‍💻 Author
 
-You've successfully run and modified your React Native App. :partying_face:
+**Marília Fernandes**
 
-### Now what?
+Junior React Native Developer
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Thank you for taking the time to review this project! 🚀
