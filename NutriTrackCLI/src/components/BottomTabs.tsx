@@ -1,20 +1,35 @@
-import { StyleSheet, Text, View } from "react-native";
-import { colors } from "../theme/colors";
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { colors } from '../theme/colors';
 
-const tabs = ["TODAY", "HISTORY", "FOODS", "SETTINGS"];
+export type TabName = 'TODAY' | 'HISTORY' | 'FOODS' | 'SETTINGS';
 
-export function BottomTabs() {
+interface BottomTabsProps {
+  activeTab: TabName;
+  onTabPress: (tab: TabName) => void;
+}
+
+const tabs: TabName[] = ['TODAY', 'HISTORY', 'FOODS', 'SETTINGS'];
+
+export function BottomTabs({ activeTab, onTabPress }: BottomTabsProps) {
   return (
     <View style={styles.container}>
-      {tabs.map((tab, index) => (
-        <View key={tab} style={styles.tab}>
-          <Text style={[styles.label, index === 0 && styles.activeLabel]}>
-            {tab}
-          </Text>
+      {tabs.map(tab => {
+        const active = activeTab === tab;
 
-          {index === 0 && <View style={styles.activeIndicator} />}
-        </View>
-      ))}
+        return (
+          <Pressable
+            key={tab}
+            style={({ pressed }) => [styles.tab, pressed && styles.pressed]}
+            onPress={() => onTabPress(tab)}
+          >
+            <Text style={[styles.label, active && styles.activeLabel]}>
+              {tab}
+            </Text>
+
+            {active && <View style={styles.activeIndicator} />}
+          </Pressable>
+        );
+      })}
     </View>
   );
 }
@@ -22,7 +37,7 @@ export function BottomTabs() {
 const styles = StyleSheet.create({
   container: {
     height: 54,
-    flexDirection: "row",
+    flexDirection: 'row',
     backgroundColor: colors.surface,
     borderTopWidth: 1,
     borderTopColor: colors.border,
@@ -30,23 +45,28 @@ const styles = StyleSheet.create({
 
   tab: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+  },
+
+  pressed: {
+    opacity: 0.6,
   },
 
   label: {
     fontSize: 10,
-    color: "#9AA19C",
-    fontWeight: "500",
+    color: '#9AA19C',
+    fontWeight: '500',
   },
 
   activeLabel: {
     color: colors.primaryDark,
+    fontWeight: '700',
   },
 
   activeIndicator: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     width: 48,
     height: 2,
