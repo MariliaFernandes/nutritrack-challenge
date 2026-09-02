@@ -1,3 +1,4 @@
+
 # 🥗 NutriTrack Challenge
 
 Technical challenge implementation of a nutrition dashboard using **React Native CLI and TypeScript**.
@@ -5,6 +6,8 @@ Technical challenge implementation of a nutrition dashboard using **React Native
 ## 📱 Preview
 
 <img width="384" height="860" alt="NutriTrack React Native CLI implementation" src="https://github.com/user-attachments/assets/e0518566-9836-4d77-a7d5-76dc09997a6c" />
+
+https://github.com/user-attachments/assets/0b3bdb36-1cac-46e3-93e4-9e23bcd80d01
 
 ## 🚀 Implementation
 
